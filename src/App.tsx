@@ -1,31 +1,31 @@
+import Nav from "./component/Nav";
 
-type ButtonPros = { text: string, color: string, value?: number }
 export default function App() {
-  return (
-    <div>
-      <h1 className="bg-red-300 font-bold">Hello , This is React !</h1>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi. Adipisci, beatae? Quisquam sint labore, magni minus accusantium soluta maxime.</p>
+    const navItems = [
+        { id: 1, name: "Home", link: "/" },
+        { id: 2, name: "About", link: "/about" },
+        { id: 3, name: "Project", link: "/project" },
+    ];
+    return (
+        <div>
+            <Nav navItem={navItems} />
 
-      <Button text="Add" color="blue" value={100} />
-      <Button text="Reset" color="zinc" />
-      <Button text="Remove" color="green" value={300} />
-
-      <Button2 text="Remove" color="red" value={300} />
-      <Button2 text="Reset" color="zinc" />
-      <Button2 text="Add" color="blue" value={100} />
-
-    </div>
-  )
-}
-
-function Button(props: ButtonPros) {
-  console.log(props)
-  return <button className={`${props.color === "blue" ? "bg-blue-500" : props.color === "zinc" ? "bg-zinc-500" : props.color === "green" ? "bg-green-500" : "bg-red-400"}`}>
-    {props.text + " " + props.color + " " + props.value}</button>;
-}
-
-function Button2({ text, color, value }: ButtonPros) {
-  // console.log(props)
-  return <button className={`${color === "blue" ? "bg-blue-500" : color === "zinc" ? "bg-zinc-500" : color === "green" ? "bg-green-500" : "bg-red-400"}`}>
-    {text + " " + color + " " + value}</button>;
+            <header>
+                <div className="min-h-[80vh] flex flex-col justify-center items-center p-20">
+                    <h1 className="text-4xl font-bold mb-10">Welcome to my Portofolio</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis aut deleniti debitis fugit illum harum ducimus iure corporis quibusdam maiores aspernatur eos iste ab officia natus necessitatibus, cupiditate sint cum. Facere soluta pariatur quibusdam neque iste explicabo eos et quas?</p>
+                </div>
+            </header>
+            <main>
+                <section id="about" className="min-h-[80vh] flex items-center flex-col justify-center p-20">
+                    <h2 className="text-3xl font-bold mb-10">About Me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi. Adipisci, beatae? Quisquam sint labore, magni minus accusantium soluta maxime.</p>
+                </section>
+                <section id="project" className="min-h-[80vh] flex items-center flex-col justify-center p-20">
+                    <h2 className="text-3xl font-bold mb-10">My Project</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi. Adipisci, beatae? Quisquam sint labore, magni minus accusantium soluta maxime.</p>
+                </section>
+            </main>
+        </div>
+    )
 }
