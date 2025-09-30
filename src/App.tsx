@@ -1,31 +1,30 @@
+import { Route, Routes } from "react-router";
 import Nav from "./component/Nav";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import Contact from "./pages/Contact";
+import LogIn from "./pages/LogIn";
 
 export default function App() {
     const navItems = [
         { id: 1, name: "Home", link: "/" },
         { id: 2, name: "About", link: "/about" },
         { id: 3, name: "Project", link: "/project" },
+        { id: 4, name: "Contact", link: "/contact" },
     ];
+
     return (
         <div>
             <Nav navItem={navItems} />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/project" element={<Project />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<LogIn />} />
+            </Routes>
 
-            <header>
-                <div className="min-h-[80vh] flex flex-col justify-center items-center p-20">
-                    <h1 className="text-4xl font-bold mb-10">Welcome to my Portofolio</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis aut deleniti debitis fugit illum harum ducimus iure corporis quibusdam maiores aspernatur eos iste ab officia natus necessitatibus, cupiditate sint cum. Facere soluta pariatur quibusdam neque iste explicabo eos et quas?</p>
-                </div>
-            </header>
-            <main>
-                <section id="about" className="min-h-[80vh] flex items-center flex-col justify-center p-20">
-                    <h2 className="text-3xl font-bold mb-10">About Me</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi. Adipisci, beatae? Quisquam sint labore, magni minus accusantium soluta maxime.</p>
-                </section>
-                <section id="project" className="min-h-[80vh] flex items-center flex-col justify-center p-20">
-                    <h2 className="text-3xl font-bold mb-10">My Project</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi. Adipisci, beatae? Quisquam sint labore, magni minus accusantium soluta maxime.</p>
-                </section>
-            </main>
         </div>
     )
 }

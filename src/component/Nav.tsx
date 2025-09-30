@@ -9,7 +9,7 @@ export default function Nav({ navItem }: { navItem: navType[] }) {
                     {
                         navItem.map((item) => (
                             <li key={item.id}>
-                                <a href="{item.link}">{item.name}</a>
+                                <a href={item.link}>{item.name}</a>
                             </li>
                         ))
                     }

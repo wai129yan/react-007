@@ -3,3 +3,15 @@ export type navType = {
     name: string;
     link: string;
 }
+
+export type headerType = {
+    title: string;
+    description: string;
+}
+
+export type sectionType = {
+    id: number;
+    sectionID?: string;
+    title: string;
+    description: string;
+}
