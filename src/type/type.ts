@@ -15,3 +15,15 @@ export type sectionType = {
     title: string;
     description: string;
 }
+
+export type blogType = {
+    id: number;
+    title: string;
+    description: string;
+}
+
+export type navLinkType = {
+    id: number;
+    name: string;
+    link: string;
+}

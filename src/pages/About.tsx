@@ -1,9 +1,21 @@
+import { useState } from "react";
+import Hook from "../component/Hook";
 
 
 export default function About() {
-    return (
-        <div>
+    //state data
+    const hello = useState("Hello About Page");
+    console.log('hello : >> ', hello);
+    const [data, setData] = useState("initial data");
+    console.log('data : >> ', data);
 
-        </div>
+    return (
+        <>
+            {/* <div>{data}</div> */}
+            {/* <button onClick={() => setData("update data")}>update</button> */}
+            <h2>Hooks</h2>
+            <Hook />
+        </>
+
     )
 }
