@@ -27,3 +27,18 @@ export type navLinkType = {
     name: string;
     link: string;
 }
+
+export type PostType = {
+    id: number;
+    userId: number;
+    title: string;
+    body: string;
+}
+export type ProductType = {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+}

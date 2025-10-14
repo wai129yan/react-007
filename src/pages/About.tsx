@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hook from "../component/Hook";
+import Hook2 from "../component/Hook2";
 
 
 export default function About() {
@@ -15,6 +16,7 @@ export default function About() {
             {/* <button onClick={() => setData("update data")}>update</button> */}
             <h2>Hooks</h2>
             <Hook />
+            <Hook2 />
         </>
 
     )
