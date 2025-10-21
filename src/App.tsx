@@ -8,6 +8,7 @@ import LogIn from "./pages/LogIn";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import type { navLinkType } from "./type/type";
+import ProductDetail from "./component/ProductDetail";
 
 
 export default function App() {
@@ -16,7 +17,6 @@ export default function App() {
         { id: 2, name: "About", link: "/about" },
         { id: 3, name: "Project", link: "/project" },
         { id: 4, name: "Contact", link: "/contact" },
-
         { id: 6, name: "Blog", link: "/blog" },
     ];
 
@@ -32,6 +32,7 @@ export default function App() {
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/:blogid" element={<BlogDetail />} />
+                    <Route path="/products/:productid" element={<ProductDetail />} />
                 </Route >
             </Routes>
 

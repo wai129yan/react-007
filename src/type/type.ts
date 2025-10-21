@@ -41,4 +41,22 @@ export type ProductType = {
     description: string;
     category: string;
     image: string;
+    inStock?: number;
+    size?: string[];
+    images?: string[];
+
+    colors?: {
+        name: string;
+        hex: string;
+    }[];
+    reviews?: {
+        id: number;
+        name: string;
+        email: string;
+        body: string;
+    }[];
+    rating?: {
+        rate: number;
+        count: number;
+    }
 }
